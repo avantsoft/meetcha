@@ -1,0 +1,29 @@
+
+.x-form-label {
+    white-space: normal;
+}
+
+.setting-label{
+    font-size:15px;
+}
+
+.question-label {
+    font-size: 15px;
+    padding-top: 0.9em;
+}
+
+.join-questions {
+    .x-form-field {
+        @include single-box-shadow(#888, 0, 4px, 6px, -4px, false);
+    }
+
+    .x-scroll-container > .x-form-inner {
+        padding-top: 0;
+    }
+}
+
+.comment-input {
+    margin-right: 10px;
+    border: 1px solid grey;
+    @include border-radius(5px);
+}

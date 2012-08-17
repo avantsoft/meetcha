@@ -1,0 +1,43 @@
+@import 'variables';
+@import 'st';
+@import 'pictos';
+@import 'MainToolbar';
+@import 'list';
+@import 'compass/typography/links/link-colors';
+@import 'forms';
+@import 'buttons';
+
+.coloredbg {
+  @include border-radius(4px);
+  border:{
+    width: 2px;
+    style: solid;
+  }
+  opacity: 0.7;
+  padding: 2px 4px;
+  font-size: large;
+  width: 14%;
+  max-width: 40px;
+  height: 20px;
+  margin-top: 15px;
+  border-color: #D63030;
+  background-color: #F8DCDC;
+}
+
+body {
+    @include radial-gradient(color-stops(rgba(196,0,0,1) 0%, rgba(92,0,0,1) 100%));
+}
+
+.home-landscape > .x-body {
+    background: url('../images/meetcha_screen_bg_landscape.png') top left no-repeat;
+}
+.home-portrait > .x-body {
+    background: url('../images/meetcha_screen_bg.png') no-repeat;
+}
+
+
+.meeting-details {
+    .x-innerhtml {
+        padding: 0.7em;
+    }
+}

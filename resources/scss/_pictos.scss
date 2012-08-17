@@ -1,0 +1,35 @@
+
+@include pictos-iconmask('home');
+@include pictos-iconmask('find');
+@include pictos-iconmask('globe1');
+@include pictos-iconmask('list');
+@include pictos-iconmask('settings9');
+@include pictos-iconmask('info');
+@include pictos-iconmask('team');
+@include pictos-iconmask('chat');
+@include pictos-iconmask('eject');
+
+
+.find-groups {
+    background-image: url(../images/icon_findgroups_upstate.png);
+    background-size: 75px;
+}
+.find-meetups {
+    background-image: url(../images/icon_meetups.png);
+    background-size: 45px;
+}
+.my-meetups {
+    background-image: url(../images/icon_my_meetups.png);
+    background-size: 45px;
+}
+.my-groups{
+    background-image: url(../images/icon_my_groups.png);
+    background-size: 75px;
+}
+
+
+.x-button-pressed {
+    .find-groups {
+        background-image: url(../images/icon_findgroups_tapstate.png);
+    }
+}

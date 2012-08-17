@@ -1,0 +1,126 @@
+.x-button .x-button-icon.x-icon-mask.info {
+    background-image: none;
+    background-color: #fff;
+}
+
+.add-btn {
+    margin-top:24px;
+}
+
+.logout-link {
+    display: block;
+    color: #000;
+    text-decoration: none;
+    margin-top: 20px;
+    padding: 5px 6em;
+    @include border-radius(5px);
+    @include background-gradient(#ccc, 'recessed');
+    border: 1px solid #999;
+    font-weight: bold;
+}
+
+.button-container {
+    position:relatve;
+    @include radial-gradient(color-stops(rgba(196,0,0,1) 0%, rgba(92,0,0,1) 100%));
+    border: 0 !important;
+    margin: 0 !important;
+    padding-left: 20px;   
+}
+
+.home-button {
+    @include box-shadow;
+    background-image: none !important;
+    background-color: rgba(196,0,0,1) !important;
+    border-color: #990000;
+    @include border-radius($button-height * 2);
+    width: 100px;
+    height: 100px;
+    z-index: 0 !important;
+
+    &.mygroups, &.findmeetups {
+        width: 120px;
+        height: 110px;
+    }
+
+    .x-button-label {
+        color: #fff;
+        font-weight: normal;
+        font-size: 14px;
+    }
+
+    .x-button-icon {
+        width: 4em;
+        height: 2.5em;
+        background-repeat: no-repeat;
+        -webkit-mask-repeat: no-repeat;
+        margin-top: 5px;
+    }
+}
+
+.findmeetups, .mygroups, .findgroups {
+    .x-button-icon {
+        margin-top: 0.7em;
+    }
+}
+
+.findgroups {
+    .x-button-label {
+        margin-top: -0.3em;
+    }
+}
+
+a.button {
+    width: 48px;
+    height: 32px;
+    display: inline-block;
+    vertical-align:center;
+    font-size: 0.7em !important;
+    font-weight: bold !important;
+    text-decoration: none !important;
+}
+
+a {
+    &.add-btn, &.checkmark-btn, &.delete-btn {
+        padding-top: 45px;
+        font-size: 0.6em !important;
+        text-transform: uppercase;
+        text-align: center;
+    }
+    &.add-btn {
+        background: url('../images/btn_add.png') no-repeat 8px 5px;
+    }
+    &.checkmark-btn {
+        background: url('../images/btn_checkmark.png') no-repeat 8px 5px;
+    }
+    &.cancel-btn {
+        background: url('../images/btn_cancel.png') no-repeat 2px 5px;
+    }
+    &.delete-btn {
+        background: url('../images/btn_delete.png') no-repeat 8px 5px;
+    }
+}
+
+@mixin list-button($url) {
+    background: url($url) center 5px no-repeat, -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(236,236,236,1)), color-stop(100%,rgba(218,218,218,1))); /* Chrome,Safari4+ */
+    background: url($url) center 5px no-repeat, -webkit-linear-gradient(top, rgba(236,236,236,1) 0%,rgba(218,218,218,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: url($url) center 5px no-repeat, linear-gradient(top, rgba(236,236,236,1) 0%,rgba(218,218,218,1) 100%); /* W3C */
+}
+
+.going-comments, .member-count {
+    width: 400px;
+    .button {
+        height: auto;
+        width: auto;
+        text-decoration: none;
+        color: #333;
+        padding: 2.4em 0.6em 0.4em 0.6em;
+        margin-right: 0.5em;
+        @include border-radius(6px);
+    }
+    .comments-btn {
+        @include list-button('../images/24_icon_comments.png');
+    }
+    .going-btn {
+        @include list-button('../images/24_icon_attending.png');
+    }
+}

@@ -1,0 +1,43 @@
+# PHP Pre-requisite.
+ - curl.php should be enabled in php.ini
+
+# Deployment Steps
+
+The following three steps must be carried out to run the app.
+
+1. Set the key and secret of the OAuth Consumer for your Meetcha app
+    - Login to Meetup.com
+      - Set up a new account, if you do not have Meetup.com account
+    - After login, switch to the Meetup API page (http://www.meetup.com/meetup_api/)
+    - Click on 'OAuth Consumers' > 'OAuth Consumers' menu. 
+    - The OAuth Consumers page lists the available OAuth Consumers created by you.
+    - You can re-use key and secret of any existing OAuth Constumer, if you want. 
+    - To create a new OAuth Consumer, click the 'Register OAuth Consumer' button.
+    - On 'Register OAuth Consumer', provide the Consumer Name and reference to Application Website (you do not need a site for this app).
+    - Click 'Register Consumer' button which will create a new OAuth Consumer.
+    - Copy the key and secret of newly created OAuth Consumer.
+    - Set the key and secret of the OAuth Consumer
+      - Open the php/config.php file.
+      - Replace the value of $key variable with the OAuth Consumer key that you generated in the previous step.
+      - Replace the value of $secret variable with the OAuth Consumer secret that you generated in the previous step.
+      - Save the config.php file.
+
+2. Deploy PHP for Meetcha App and set post-authorization destination URL
+You can deploy the Meetcha app and its PHP scripts on the same server, or on different servers.
+    - Pre-Requisite: Download and install HTTP server that is configured to run PHP (make sure you enable Curl).
+    - Deploy Meetcha App PHP folder to the server.
+    - Specify post-authorization destination URL [NOTE: You can ignore these step, if PHP is deployed under Meetcha App dir]
+      - Open the php/index.php file.
+      - Modify the $meetcha_home_destination variable value to reference Meetcha App Home location.
+      
+3. Deploy Meetcha App and set serverUrl to refer to PHP scripts 
+    - Pre-Requisite: Download and install HTTP server. 
+    - Deploy Meetcha App to the server.
+    - Specify Server URL for Meetcha PHP API
+      - NOTE: You can ignore this step, if Meetcha PHP API is deployed under Meetcha App dir
+      - Open the meetcha/index.html file.
+      - Find the declaration for JavaScript variable 'serverUrl' and modify it to reference the URL location of 
+        parent directory under which 'php' is deployed. For example, if you have deployed Meetha PHP and accessing it 
+        as 'http://myserver/MeetupPhpAPI/php/index.php' then modify the value of 'serverUrl' as 'http://myserver/MeetupPhpAPI/'
+      - Save the index.html file.  
+      

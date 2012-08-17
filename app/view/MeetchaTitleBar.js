@@ -1,0 +1,66 @@
+Ext.define('Meetcha.view.MeetchaTitleBar', {
+    extend: 'Ext.TitleBar',
+    xtype: 'meetchatitlebar',
+    config: {
+        docked: 'top',
+        cls: 'topToolbar',
+        id: 'meetchatitlebar',
+        defaults: {
+            xtype: 'button'
+        },
+        items: [{
+            itemId: 'homeButton',
+            hidden: true,
+            iconMask: true,
+            iconCls: 'home',
+            action: 'home',
+            align: 'left'
+        }, {
+            itemId: 'infoButton',
+            action: 'info',
+            hidden: true,
+            iconMask: true,
+            iconCls: 'info'
+        }, {
+            itemId: 'logoutButton',
+            action: 'logout',
+            hidden: true,
+            iconMask: true,
+            text: 'Logout',
+            align: 'right'
+        }, {
+            itemId: 'atMeetupButton',
+            action: 'atmeetup',
+            hidden: true,
+            iconMask: true,
+            text: 'Upcoming',
+            align: 'left'
+        }, {
+            itemId: 'loginButton',
+            text: 'login',
+            align: 'right',
+            action: 'login',
+            hidden: true
+        }, {
+            itemId: 'findButton',
+            iconMask: true,
+            iconCls: 'find',
+            align: 'right',
+            action: 'find',
+            hidden: true
+        }, {
+            itemId: 'listMapButton',
+            iconMask: true,
+            iconCls: 'globe1',
+            align: 'right',
+            action: 'map',
+            hidden: true
+        }, {
+            iconMask: true,
+            iconCls: 'list',
+            align: 'right',
+            hidden: true,
+            action: 'list'
+        }]
+    }
+});

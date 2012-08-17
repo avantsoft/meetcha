@@ -1,0 +1,162 @@
+.x-list a{
+    @include link-colors(#000, #000,#000,#000,#000);
+}
+
+.x-list-item {
+    overflow: hidden;
+}
+
+.x-list-item:nth-child(2n) {
+    background-color: #fff;
+}
+.x-list-item:nth-child(2n+1) {
+    background-color: #F7F7F7;
+}
+.x-list-normal .x-list-item:last-child .x-list-item-label {
+    border-bottom: none;
+}
+.x-list-normal .x-list-item:last-child {
+    border-bottom: 1px solid #dedede;
+}
+
+.ml-rsvp {
+    width: 60px;
+    float: right;
+}
+
+.ml-detail {
+    padding-left: 80px;
+    padding-bottom:2px;
+}
+
+.ml-name {
+    font-size: 0.875em;
+    padding-bottom:2px;
+}
+
+.ml-date {
+    font-size:0.875em;
+    padding-bottom:2px;
+    width: 60px;
+    float: left;
+}
+
+.ml-distance {
+    font-size:0.875em;
+    padding-bottom:2px;
+}
+
+.name {
+    font-size:0.875em;
+}
+
+.people-list {
+    .member-count {
+        margin-top: 10px;
+    }
+
+    &.groups{
+        .organizer-name{
+            font-size:0.875em
+        }
+        .person-image{
+            float: left;
+        }
+    }
+
+    .x-list-item {
+        min-height: 77px;
+    }
+}
+
+.ml-details {
+    margin: 0 65px;
+}
+
+.my-groups-list, .find-groups-list {
+    .ml-details {
+        margin-right: 0;
+    }
+}
+
+.gl-name {
+    padding: 0;
+}
+
+.gl-name, .meeting-name {
+     a {
+        text-decoration: none;
+        color: #333;
+        font-weight: bold;
+        font-size: 0.8em !important;
+        color: #000;
+        line-height: 1.3;
+        padding: 0;
+        margin: 0;
+    }
+}
+
+.date-time {
+    text-align: center;
+    width: 48px;
+
+    .month, .day, .date {
+        text-transform: uppercase;
+        font-weight: bold;
+        line-height: 1;
+    }
+
+    .month {
+        font-size: .75em;
+        padding: 4px 2px;
+    }
+
+    .day {
+        padding: 4px 2px 2px 2px;
+    }
+
+    .date {
+        font-size: 1.6em;
+        color: #333;
+        background: #fff;
+        padding: 1px 2px 3px 2px;
+    }
+    .time {
+        font-weight: normal;
+        font-size: .7em;
+        padding: 3px 0;
+        line-height: 1;
+    }
+}
+
+.calendar {
+    background: #666;
+    color: #fff;
+    @include border-radius(3px);
+    padding: 2px;
+}
+
+.group-name {
+    color: #333;
+    font-size:0.7em !important;
+}
+
+.location-name {
+    color: #444;
+    font-size:0.7em;
+}
+
+.location-name em {
+    font-style: italic;
+    color: #333;
+}
+
+.going-comments {
+    padding: 10px 0;
+}
+
+.organizer-name {
+    color: #333;
+    font-size:0.7em !important;
+    padding: 0 !important;
+}
