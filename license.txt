@@ -1,0 +1,1 @@
+This application is made available for the benefit of the community to learn and explore how to build a mobile app using Sencha Touch 2. Contributions are welcome to extend the app. You can use it for your own purpose as well. It is released under MIT license - http://opensource.org/licenses/mit-license.php.
